@@ -7,17 +7,17 @@ public class Main {
         /// что программа работает очень долго (в данном примере было затрачено 17552 миллисекунд).
         /// Создав метод arrayQuickSort, реализующий быструю сортировку с алгоритмической сложностью (O(n×log2n) (ср. значение)),
         /// была существенно увеличина скорость работы программы
-        /// В качестве критерия при тестировании будет использовано значение: 100 миллисекунд
+        /// В качестве критерия при тестировании будет использовано значение: 200 миллисекунд
         //long startTime = System.currentTimeMillis();
 
         SorterService quickSorter = new SorterService();
         SorterService bubbleSorter = new SorterService();
 
-        quickSorter.fillArray(10);
+        quickSorter.fillArray(100_000);
         quickSorter.calculateQuickSortTime();
         //quickSorter.showSortedArray();
 
-        bubbleSorter.fillArray(10);
+        bubbleSorter.fillArray(100_000);
         bubbleSorter.calculateBubbleSortTime();
         //bubbleSorter.showSortedArray();
 

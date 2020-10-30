@@ -6,7 +6,7 @@ public class SorterServiceTest {
     // максимальное время выполнения задачи равно 100 миллисекундам
     // Для наглядности тест bubbleSortTimeTest пройден не будет
 
-    private static final long CURRENT_TIME = 100L;
+    private static final long CURRENT_TIME = 200L;
     private static final int arraySize = 100_000;
     private static final int unvalidatedValue = - 1;
     private static boolean timeCorrected = false;
@@ -32,6 +32,7 @@ public class SorterServiceTest {
                 () -> sorter.arrayQuickSort(testedArray, unvalidatedValue, testedArray.length));
     }
 
+    /// Демонстрация ситуации, когда сортировка пузырька не пройдет тест
     @Test
     public void quickSortTimeTest() {
         service.fillArray(arraySize);
