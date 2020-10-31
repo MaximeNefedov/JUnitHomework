@@ -9,7 +9,6 @@ public class SorterServiceTest {
     private static final long CURRENT_TIME = 200L;
     private static final int arraySize = 100_000;
     private static final int unvalidatedValue = - 1;
-    private static boolean timeCorrected = false;
     private SorterService service;
 
     @BeforeEach
@@ -37,6 +36,7 @@ public class SorterServiceTest {
     public void quickSortTimeTest() {
         service.fillArray(arraySize);
         service.calculateQuickSortTime();
+        boolean timeCorrected = false;
         if (service.getTimeSpent() <= CURRENT_TIME) {
             timeCorrected = true;
         }
@@ -47,6 +47,7 @@ public class SorterServiceTest {
     public void bubbleSortTimeTest() {
         service.fillArray(arraySize);
         service.calculateBubbleSortTime();
+        boolean timeCorrected = false;
         if (service.getTimeSpent() <= CURRENT_TIME) {
             timeCorrected = true;
         }
